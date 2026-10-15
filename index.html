@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퇴근길 프레시 페스타 | 이마트 인기 냉장 간편식 즉시 할인 프로모션</title>
+  <meta name="description" content="데이터로 찾은 기회! 리버점 단독 5~10% 즉시 할인, 센트럴·파크점 3개 묶음 15% 할인, 제로음료 콤보 할인까지! 퇴근길 가볍고 든든한 한 끼를 만나보세요.">
+  <meta name="keywords" content="냉장간편식, 퇴근길타임세일, 이마트, 리버점, 센트럴점, 파크점, 간편식할인, 제로탄산콤보, 밀키트">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Banner: Live Status Bar -->
+  <aside class="top-announcement" id="top-announcement-bar">
+    <div class="container announcement-inner">
+      <span class="pulse-indicator"></span>
+      <span class="announcement-text" id="live-banner-text">
+        <strong class="highlight">🔥 평일 월·화 18:00~20:00</strong> 리버점 한정 '퇴근길 프레시 타임세일' 인기 간편식 5~10% 즉시 할인!
+      </span>
+      <div class="announcement-timer" id="hero-mini-timer">
+        <i class="fa-regular fa-clock"></i>
+        <span id="mini-countdown">타임세일 카운트다운 계산 중...</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="main-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo" id="brand-logo-link">
+        <div class="brand-badge">emart X FRESH</div>
+        <span class="brand-title">퇴근길 <strong>프레시 페스타</strong></span>
+      </a>
+
+      <nav class="main-nav" id="main-navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active" id="nav-home">홈</a></li>
+          <li><a href="#cardnews" class="nav-link" id="nav-cardnews">카드뉴스 한눈에</a></li>
+          <li><a href="#store-benefits" class="nav-link" id="nav-stores">점포별 혜택</a></li>
+          <li><a href="#menu-showcase" class="nav-link" id="nav-menu">인기 간편식 6종</a></li>
+          <li><a href="#combo-section" class="nav-link" id="nav-combo">음료 콤보 & 스탬프</a></li>
+          <li><a href="#calculator" class="nav-link" id="nav-calc">할인 계산기</a></li>
+          <li><a href="#master-plan" class="nav-link nav-special" id="nav-data">📊 데이터 기획 리포트</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm pulse-btn" id="open-coupon-modal-btn">
+          <i class="fa-solid fa-ticket"></i> 모바일 쿠폰 받기
+        </button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag-wrap">
+            <span class="badge badge-accent"><i class="fa-solid fa-chart-line"></i> POS 데이터 & 설문 실증 기획</span>
+            <span class="badge badge-primary"><i class="fa-solid fa-store"></i> 리버점 · 센트럴점 · 파크점</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-main-title">
+            오늘도 수고했어요! <br>
+            <span class="gradient-text">퇴근길 프레시 타임세일</span>
+          </h1>
+
+          <p class="hero-description" id="hero-desc-text">
+            데이터로 밝혀낸 고객의 진짜 바람! 1인 가구 부담 없는 <strong>단품 즉시할인(5~10%)</strong>부터 
+            주거단지 맞춤 <strong>3개 묶음 15% 할인</strong>, 제로음료 <strong>1,000원 콤보</strong>까지 
+            퇴근 후 간편하고 맛있는 프리미엄 한 끼를 즐겨보세요.
+          </p>
+
+          <!-- Realtime Timesale Countdown Card -->
+          <div class="countdown-card" id="hero-countdown-card">
+            <div class="countdown-header">
+              <div class="countdown-title">
+                <i class="fa-solid fa-stopwatch"></i>
+                <span id="countdown-status-title">리버점 퇴근길 타임세일 시작까지</span>
+              </div>
+              <span class="badge badge-subtle" id="timesale-badge">월·화 18:00 ~ 20:00</span>
+            </div>
+            <div class="timer-boxes" id="timer-display-group">
+              <div class="timer-box">
+                <span class="timer-val" id="time-days">00</span>
+                <span class="timer-label">일 (Days)</span>
+              </div>
+              <span class="timer-sep">:</span>
+              <div class="timer-box">
+                <span class="timer-val" id="time-hours">00</span>
+                <span class="timer-label">시간 (Hours)</span>
+              </div>
+              <span class="timer-sep">:</span>
+              <div class="timer-box">
+                <span class="timer-val" id="time-minutes">00</span>
+                <span class="timer-label">분 (Mins)</span>
+              </div>
+              <span class="timer-sep">:</span>
+              <div class="timer-box">
+                <span class="timer-val" id="time-seconds">00</span>
+                <span class="timer-label">초 (Secs)</span>
+              </div>
+            </div>
+            <p class="countdown-caption" id="countdown-caption-text">
+              ⏰ 매주 월·화 17:30 모바일 앱 타깃 쿠폰 푸시 발송! 지금 쿠폰을 챙겨두세요.
+            </p>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" id="hero-cta-coupon-btn">
+              <i class="fa-solid fa-gift"></i> 타임특가 쿠폰 받기
+            </button>
+            <a href="#cardnews" class="btn btn-outline btn-lg" id="hero-cta-cardnews-link">
+              <i class="fa-solid fa-images"></i> 홍보 카드뉴스 보기
+            </a>
+            <a href="#master-plan" class="btn btn-ghost btn-lg" id="hero-cta-data-link">
+              <i class="fa-solid fa-file-invoice"></i> 기획서 데이터 요약
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-num">61.9%</span>
+              <span class="metric-desc">단품 할인 압도적 선호</span>
+            </div>
+            <div class="metric-div"></div>
+            <div class="metric-item">
+              <span class="metric-num">+35.7%</span>
+              <span class="metric-desc">프로모션 수량 신장률</span>
+            </div>
+            <div class="metric-div"></div>
+            <div class="metric-item">
+              <span class="metric-num">1,000원</span>
+              <span class="metric-desc">제로탄산/커피 콤보가</span>
+            </div>
+            <div class="metric-div"></div>
+            <div class="metric-item">
+              <span class="metric-num">2.3개월</span>
+              <span class="metric-desc">ROI 투자비 전액 회수</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Poster Showcase with interactive 3D effect -->
+        <div class="hero-visual">
+          <div class="visual-card-wrap" id="hero-poster-wrapper">
+            <div class="floating-sticker sticker-sale">
+              <i class="fa-solid fa-fire"></i> 인기 간편식 5~10% OFF
+            </div>
+            <div class="floating-sticker sticker-store">
+              <i class="fa-solid fa-location-dot"></i> 리버점 단독 18-20시
+            </div>
+            <div class="poster-frame" id="hero-poster-frame">
+              <img src="카드뉴스/최종 포스터.png" alt="퇴근길 프레시 타임세일 최종 포스터" id="hero-poster-image" class="zoomable-image" data-lightbox="카드뉴스/최종 포스터.png" data-caption="[메인 포스터] 퇴근길 프레시 타임세일 (월·화 18:00~20:00)">
+              <div class="poster-overlay">
+                <button class="btn-overlay-zoom" id="hero-zoom-btn">
+                  <i class="fa-solid fa-expand"></i> 포스터 크게 보기
+                </button>
+              </div>
+            </div>
+            <div class="character-greeting">
+              <div class="char-bubble">
+                "오늘 저녁 든든하게 챙겨드세요! 리버점에서 만나요~ 💛"
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card News Gallery Section -->
+    <section class="section cardnews-section" id="cardnews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-sparkles"></i> PROMOTION CAMPAIGN</span>
+          <h2 class="section-title">한눈에 쏙 들어오는 <strong>카드뉴스 갤러리</strong></h2>
+          <p class="section-subtitle">
+            기획서의 핵심 전략을 고객의 눈높이에 맞춰 직관적인 비주얼로 담아낸 5종 카드뉴스와 포스터를 감상해보세요.
+          </p>
+        </div>
+
+        <!-- Filter Tabs for Cardnews -->
+        <div class="filter-tabs" id="cardnews-filter-tabs">
+          <button class="filter-tab active" data-filter="all" id="filter-all">전체 보기 (6)</button>
+          <button class="filter-tab" data-filter="river" id="filter-river">리버점 단독 혜택</button>
+          <button class="filter-tab" data-filter="bundle" id="filter-bundle">센트럴·파크점 묶음할인</button>
+          <button class="filter-tab" data-filter="combo" id="filter-combo">음료 콤보 & 스탬프</button>
+          <button class="filter-tab" data-filter="timesale" id="filter-timesale">타임세일 & 모바일쿠폰</button>
+        </div>
+
+        <!-- Cardnews Carousel / Grid -->
+        <div class="cardnews-grid" id="cardnews-grid-container">
+          
+          <!-- Card 1 -->
+          <div class="cardnews-card" data-category="river" id="card-1">
+            <div class="cardnews-badge">SLIDE 01 · 리버점 단독</div>
+            <div class="cardnews-thumb-wrap">
+              <img src="카드뉴스/1번 카드뉴스.png" alt="1번 카드뉴스: 간편식 단품 즉시 할인" class="cardnews-img zoomable-image" data-lightbox="카드뉴스/1번 카드뉴스.png" data-caption="[01. 간편식 단품 즉시 할인] 사전설문 61.9% 선호! 리버점 단독 프로모션 신장률 +35.7% 목표">
+              <div class="cardnews-hover-action">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> 클릭하여 확대
+              </div>
+            </div>
+            <div class="cardnews-info">
+              <h3 class="cardnews-title">데이터로 찾은 기회, 단품 즉시 할인</h3>
+              <p class="cardnews-text">
+                사전 설문 61.9%의 압도적 선택! 복잡한 다량 묶음 대신 1인 가구에 맞춘 <strong>인기 단품 5~10% 즉시 할인</strong>으로 리버점 구매 장벽을 허뭅니다.
+              </p>
+              <div class="cardnews-tags">
+                <span class="tag">#단품즉시할인</span>
+                <span class="tag">#설문선호61.9%</span>
+                <span class="tag">#연간순증9753만</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="cardnews-card" data-category="bundle" id="card-2">
+            <div class="cardnews-badge">SLIDE 02 · 센트럴 & 파크점</div>
+            <div class="cardnews-thumb-wrap">
+              <img src="카드뉴스/2번 카드뉴스.png" alt="2번 카드뉴스: 간편식 3개 묶음 할인" class="cardnews-img zoomable-image" data-lightbox="카드뉴스/2번 카드뉴스.png" data-caption="[02. 간편식 3개 묶음할인] 여러 개 담을수록 더 알차게! 3개 골라 담으면 15% 할인">
+              <div class="cardnews-hover-action">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> 클릭하여 확대
+              </div>
+            </div>
+            <div class="cardnews-info">
+              <h3 class="cardnews-title">여러 개 담을수록 더 알차게, 3개 15% 묶음할인</h3>
+              <p class="cardnews-text">
+                주거 밀집 상권인 센트럴점과 파크점 고객을 위한 <strong>3개 골라 담기 15% 할인</strong> 번들! 새우로제파스타, 비빔밥, 찌개 등 교차 선택 가능.
+              </p>
+              <div class="cardnews-tags">
+                <span class="tag">#3개골라담기</span>
+                <span class="tag">#15%할인</span>
+                <span class="tag">#센트럴파크점</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="cardnews-card" data-category="combo" id="card-3">
+            <div class="cardnews-badge">SLIDE 03 · 음료 페어링 & 스탬프</div>
+            <div class="cardnews-thumb-wrap">
+              <img src="카드뉴스/3번 카드뉴스.png" alt="3번 카드뉴스: 간편식 + 음료 콤보 할인" class="cardnews-img zoomable-image" data-lightbox="카드뉴스/3번 카드뉴스.png" data-caption="[03. 간편식 + 음료 콤보 할인] 간편식 구매 시 제로탄산/캔커피 50% 할인 (1,000원 균일가) & 최대 6만원 스탬프 리워드">
+              <div class="cardnews-hover-action">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> 클릭하여 확대
+              </div>
+            </div>
+            <div class="cardnews-info">
+              <h3 class="cardnews-title">간편식 + 제로 음료 콤보 & 스탬프 대축제</h3>
+              <p class="cardnews-text">
+                설문 85.7%의 음료 동반 구매 니즈를 반영! 간편식 구매 시 제로 탄산수 및 캔커피 <strong>50% 할인(1,000원 균일가)</strong> 및 최대 6만 원 혜택 스탬프!
+              </p>
+              <div class="cardnews-tags">
+                <span class="tag">#제로음료1000원</span>
+                <span class="tag">#크로스머천다이징</span>
+                <span class="tag">#스탬프6만원</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="cardnews-card" data-category="timesale" id="card-4">
+            <div class="cardnews-badge">SLIDE 04 · 퇴근길 프레시 세일</div>
+            <div class="cardnews-thumb-wrap">
+              <img src="카드뉴스/4번 카드뉴스.png" alt="4번 카드뉴스: 퇴근길 프레시 타임세일" class="cardnews-img zoomable-image" data-lightbox="카드뉴스/4번 카드뉴스.png" data-caption="[04. 퇴근길 프레시 타임세일] 월·화 18:00~20:00 리버점 한정! 17:30 모바일 쿠폰 발송">
+              <div class="cardnews-hover-action">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> 클릭하여 확대
+              </div>
+            </div>
+            <div class="cardnews-info">
+              <h3 class="cardnews-title">월·화 18~20시 퇴근길 프레시 타임세일</h3>
+              <p class="cardnews-text">
+                주초 매출 저점을 극복하고 신선한 냉장 간편식을 매일 저녁 알뜰하게! 18:00~20:00 타임세일 전용 POP와 배너로 활기찬 퇴근길을 만듭니다.
+              </p>
+              <div class="cardnews-tags">
+                <span class="tag">#월화18to20시</span>
+                <span class="tag">#퇴근길타임세일</span>
+                <span class="tag">#폐기율방어</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="cardnews-card" data-category="timesale" id="card-5">
+            <div class="cardnews-badge">SLIDE 05 · CRM 모바일 쿠폰</div>
+            <div class="cardnews-thumb-wrap">
+              <img src="카드뉴스/5번카드뉴스.png" alt="5번 카드뉴스: 모바일 앱 타깃 쿠폰" class="cardnews-img zoomable-image" data-lightbox="카드뉴스/5번카드뉴스.png" data-caption="[05. 모바일 앱 타깃 쿠폰 & 알림톡] 타임세일 당일 17:30 발송! 리버점 인근 직장인 맞춤 혜택">
+              <div class="cardnews-hover-action">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> 클릭하여 확대
+              </div>
+            </div>
+            <div class="cardnews-info">
+              <h3 class="cardnews-title">17:30 모바일 앱 타깃 쿠폰 & 알림톡</h3>
+              <p class="cardnews-text">
+                퇴근 전 17:30, 리버점 인근 직장인과 단골 고객에게 타임특가 쿠폰이 자동으로 쏙! 대기 시간 없는 스마트하고 기분 좋은 쇼핑 경험을 선사합니다.
+              </p>
+              <div class="cardnews-tags">
+                <span class="tag">#17시30분알림톡</span>
+                <span class="tag">#CRM타깃쿠폰</span>
+                <span class="tag">#전환율개선</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Main Poster -->
+          <div class="cardnews-card" data-category="river" id="card-poster">
+            <div class="cardnews-badge special">FINAL POSTER · 종합 포스터</div>
+            <div class="cardnews-thumb-wrap">
+              <img src="카드뉴스/최종 포스터.png" alt="최종 포스터: 오늘도 수고했어요" class="cardnews-img zoomable-image" data-lightbox="카드뉴스/최종 포스터.png" data-caption="[최종 포스터] 오늘도 수고했어요! 퇴근길 프레시 타임세일 (월·화 18:00~20:00 인기 냉장 간편식 5~10% 즉시 할인)">
+              <div class="cardnews-hover-action">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> 클릭하여 확대
+              </div>
+            </div>
+            <div class="cardnews-info">
+              <h3 class="cardnews-title">퇴근길 프레시 타임세일 메인 포스터</h3>
+              <p class="cardnews-text">
+                매장 전면과 윈도우 그래픽에 부착될 대표 포스터! "오늘도 수고했어요! 오늘 저녁, 간편하게 한 끼!" 따스한 힐링 메시지로 고객을 맞이합니다.
+              </p>
+              <div class="cardnews-tags">
+                <span class="tag">#퇴근길포스터</span>
+                <span class="tag">#골든존진열</span>
+                <span class="tag">#현장배너</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Strategy Comparison Section -->
+    <section class="section store-benefits-section" id="store-benefits">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-compass"></i> TAILORED STRATEGY</span>
+          <h2 class="section-title">상권 분석으로 설계한 <strong>점포별 맞춤 혜택</strong></h2>
+          <p class="section-subtitle">
+            기획서의 '전략 1 · 프로모션 이원화' 실행! 고객 특성에 맞춰 최적의 쇼핑 만족을 드립니다.
+          </p>
+        </div>
+
+        <div class="store-grid">
+          <!-- River Store Card -->
+          <div class="store-card river-store" id="river-store-card">
+            <div class="store-card-header">
+              <div class="store-tag">1인 가구 & 직장인 밀집 상권</div>
+              <h3 class="store-title"><i class="fa-solid fa-location-dot"></i> 이마트 리버점 단독 혜택</h3>
+              <p class="store-tagline">"부담 없는 단품 할인으로 1인 맞춤 가벼운 식탁!"</p>
+            </div>
+            <div class="store-body">
+              <div class="store-feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
+                  <div class="feature-detail">
+                    <strong>인기 간편식 단품 5~10% 즉시 할인</strong>
+                    <span>복잡한 묶음 조건 없이 1개만 사도 즉시 적용 (설문 61.9% 반영)</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-business-time"></i></div>
+                  <div class="feature-detail">
+                    <strong>월·화 18:00~20:00 퇴근길 프레시 타임세일</strong>
+                    <span>퇴근 시간대 오픈 쇼케이스 전면 진열 및 집중 응대</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                  <div class="feature-detail">
+                    <strong>17:30 모바일 앱 타깃 알림톡 쿠폰</strong>
+                    <span>매장 방문 전 미리 챙기는 추가 할인 쿠폰</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
+                  <div class="feature-detail">
+                    <strong>매장 출입구 3m 앞 골든존 전진 진열</strong>
+                    <span>눈높이 1.2~1.5m 매대에서 고민 없이 바로 픽업</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="store-footer">
+              <span class="store-goal">목표 전환율: <strong>41.91% → 46.44%</strong> (+4.53%p 달성)</span>
+            </div>
+          </div>
+
+          <!-- Central & Park Store Card -->
+          <div class="store-card central-store" id="central-park-store-card">
+            <div class="store-card-header">
+              <div class="store-tag">주거 단지 & 다인 가족 상권</div>
+              <h3 class="store-title"><i class="fa-solid fa-users"></i> 이마트 센트럴점 · 파크점</h3>
+              <p class="store-tagline">"가족과 함께 풍성하게! 담을수록 커지는 혜택!"</p>
+            </div>
+            <div class="store-body">
+              <div class="store-feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                  <div class="feature-detail">
+                    <strong>간편식 3개 골라 담으면 15% 번들 할인</strong>
+                    <span>원하는 메뉴를 취향대로 3종 조합하여 15% 강력 할인</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+                  <div class="feature-detail">
+                    <strong>고탄력 성공 모델 상시 운영</strong>
+                    <span>파크점 매출 +56.3%, 센트럴점 매출 +48.3% 검증 번들</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                  <div class="feature-detail">
+                    <strong>신선식품 & 유제품 연계 교차 할인</strong>
+                    <span>찌개류 구매 시 신선 두부·채소 추가 할인 혜택</span>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                  <div class="feature-detail">
+                    <strong>주말 가족 식탁 밀키트 기획전 연계</strong>
+                    <span>온 가족이 든든하게 즐기는 대용량 세트 특별 구성</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="store-footer">
+              <span class="store-goal">검증 성과: <strong>행사 시 매출 +56.3%</strong> 폭발적 신장</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 SKU Menu Showcase Section -->
+    <section class="section menu-showcase-section" id="menu-showcase">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-utensils"></i> POS VERIFIED TOP 6</span>
+          <h2 class="section-title">데이터 실증 베스트 <strong>대표 간편식 6종</strong></h2>
+          <p class="section-subtitle">
+            55일간 POS 판매 데이터에서 압도적 신장률을 기록한 인기 간편식을 특가로 만나보세요.
+          </p>
+        </div>
+
+        <div class="menu-grid" id="menu-items-container">
+          
+          <!-- Menu 1 -->
+          <article class="menu-card" id="menu-item-rm105">
+            <div class="menu-growth-badge"><i class="fa-solid fa-bolt"></i> 신장률 1위 (+39.6%)</div>
+            <div class="menu-img-wrap">
+              <img src="images/menu_shrimp_rose.jpg" alt="새우 로제파스타" class="menu-img">
+              <span class="menu-code">RM-105</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-category">양식 간편식 · 파스타</div>
+              <h3 class="menu-name">새우 로제파스타</h3>
+              <p class="menu-desc">통통하고 부드러운 새우와 진하고 크리미한 토마토 로제 소스의 완벽한 조화</p>
+              <div class="menu-price-row">
+                <span class="price-original">7,200원</span>
+                <div class="price-discount-wrap">
+                  <span class="discount-rate">10% OFF</span>
+                  <span class="price-current">6,480원</span>
+                </div>
+              </div>
+              <button class="btn btn-menu-add add-to-cart-btn" data-code="RM-105" data-name="새우 로제파스타" data-price="7200" data-sale="6480" data-img="images/menu_shrimp_rose.jpg">
+                <i class="fa-solid fa-cart-plus"></i> 계산기에 담기
+              </button>
+            </div>
+          </article>
+
+          <!-- Menu 2 -->
+          <article class="menu-card" id="menu-item-rm106">
+            <div class="menu-growth-badge"><i class="fa-solid fa-seedling"></i> 건강 식단 (+35.5%)</div>
+            <div class="menu-img-wrap">
+              <img src="images/menu_konjac_bibim.jpg" alt="닭가슴살 곤약비빔밥" class="menu-img">
+              <span class="menu-code">RM-106</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-category">헬시 라이프 · 샐러드볼</div>
+              <h3 class="menu-name">닭가슴살 곤약비빔밥</h3>
+              <p class="menu-desc">신선한 야채와 촉촉한 닭가슴살, 부담 없는 곤약밥으로 완성한 칼로리 케어 한 끼</p>
+              <div class="menu-price-row">
+                <span class="price-original">5,200원</span>
+                <div class="price-discount-wrap">
+                  <span class="discount-rate">10% OFF</span>
+                  <span class="price-current">4,680원</span>
+                </div>
+              </div>
+              <button class="btn btn-menu-add add-to-cart-btn" data-code="RM-106" data-name="닭가슴살 곤약비빔밥" data-price="5200" data-sale="4680" data-img="images/menu_konjac_bibim.jpg">
+                <i class="fa-solid fa-cart-plus"></i> 계산기에 담기
+              </button>
+            </div>
+          </article>
+
+          <!-- Menu 3 -->
+          <article class="menu-card" id="menu-item-rm104">
+            <div class="menu-growth-badge"><i class="fa-solid fa-fire-burner"></i> 국물 요리 (+35.2%)</div>
+            <div class="menu-img-wrap">
+              <img src="images/menu_beef_stew.jpg" alt="우삼겹 된장찌개" class="menu-img">
+              <span class="menu-code">RM-104</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-category">정통 한식 · 탕/찌개</div>
+              <h3 class="menu-name">우삼겹 된장찌개</h3>
+              <p class="menu-desc">구수한 재래식 된장 육수에 고소한 우삼겹, 두부, 호박이 아낌없이 듬뿍 들어간 든든한 찌개</p>
+              <div class="menu-price-row">
+                <span class="price-original">6,800원</span>
+                <div class="price-discount-wrap">
+                  <span class="discount-rate">10% OFF</span>
+                  <span class="price-current">6,120원</span>
+                </div>
+              </div>
+              <button class="btn btn-menu-add add-to-cart-btn" data-code="RM-104" data-name="우삼겹 된장찌개" data-price="6800" data-sale="6120" data-img="images/menu_beef_stew.jpg">
+                <i class="fa-solid fa-cart-plus"></i> 계산기에 담기
+              </button>
+            </div>
+          </article>
+
+          <!-- Menu 4 -->
+          <article class="menu-card" id="menu-item-rm103">
+            <div class="menu-growth-badge"><i class="fa-solid fa-leaf"></i> 간편 핑거푸드 (+35.0%)</div>
+            <div class="menu-img-wrap">
+              <img src="images/menu_duck_wrap.jpg" alt="훈제오리 샐러드랩" class="menu-img">
+              <span class="menu-code">RM-103</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-category">프레시 델리 · 랩/샌드위치</div>
+              <h3 class="menu-name">훈제오리 샐러드랩</h3>
+              <p class="menu-desc">부드러운 또띠아에 훈제오리와 아삭한 양배추, 로메인, 특제 머스타드 드레싱의 산뜻한 조합</p>
+              <div class="menu-price-row">
+                <span class="price-original">6,200원</span>
+                <div class="price-discount-wrap">
+                  <span class="discount-rate">10% OFF</span>
+                  <span class="price-current">5,580원</span>
+                </div>
+              </div>
+              <button class="btn btn-menu-add add-to-cart-btn" data-code="RM-103" data-name="훈제오리 샐러드랩" data-price="6200" data-sale="5580" data-img="images/menu_duck_wrap.jpg">
+                <i class="fa-solid fa-cart-plus"></i> 계산기에 담기
+              </button>
+            </div>
+          </article>
+
+          <!-- Menu 5 -->
+          <article class="menu-card" id="menu-item-rm102">
+            <div class="menu-growth-badge"><i class="fa-solid fa-pepper-hot"></i> 화끈한 별미 (+34.9%)</div>
+            <div class="menu-img-wrap">
+              <img src="images/menu_dakgalbi_rice.jpg" alt="매콤 닭갈비볶음밥" class="menu-img">
+              <span class="menu-code">RM-102</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-category">직화 볶음밥 · 한식</div>
+              <h3 class="menu-name">매콤 닭갈비볶음밥</h3>
+              <p class="menu-desc">매콤달콤 특제 닭갈비 소스에 고소한 모짜렐라 치즈와 김가루를 더해 감칠맛 폭발</p>
+              <div class="menu-price-row">
+                <span class="price-original">5,500원</span>
+                <div class="price-discount-wrap">
+                  <span class="discount-rate">10% OFF</span>
+                  <span class="price-current">4,950원</span>
+                </div>
+              </div>
+              <button class="btn btn-menu-add add-to-cart-btn" data-code="RM-102" data-name="매콤 닭갈비볶음밥" data-price="5500" data-sale="4950" data-img="images/menu_dakgalbi_rice.jpg">
+                <i class="fa-solid fa-cart-plus"></i> 계산기에 담기
+              </button>
+            </div>
+          </article>
+
+          <!-- Menu 6 -->
+          <article class="menu-card" id="menu-item-rm101">
+            <div class="menu-growth-badge"><i class="fa-solid fa-crown"></i> 시그니처 덮밥 (+34.3%)</div>
+            <div class="menu-img-wrap">
+              <img src="images/menu_beef_bulgogi.jpg" alt="한끼 소불고기덮밥" class="menu-img">
+              <span class="menu-code">RM-101</span>
+            </div>
+            <div class="menu-content">
+              <div class="menu-category">정갈한 한끼 · 덮밥</div>
+              <h3 class="menu-name">한끼 소불고기덮밥</h3>
+              <p class="menu-desc">달콤 짭조름한 비법 간장 양념에 재운 부드러운 소불고기와 양파의 정성 가득한 한 그릇</p>
+              <div class="menu-price-row">
+                <span class="price-original">5,900원</span>
+                <div class="price-discount-wrap">
+                  <span class="discount-rate">10% OFF</span>
+                  <span class="price-current">5,310원</span>
+                </div>
+              </div>
+              <button class="btn btn-menu-add add-to-cart-btn" data-code="RM-101" data-name="한끼 소불고기덮밥" data-price="5900" data-sale="5310" data-img="images/menu_beef_bulgogi.jpg">
+                <i class="fa-solid fa-cart-plus"></i> 계산기에 담기
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross-merchandising & Stamp Reward Section -->
+    <section class="section combo-section" id="combo-section">
+      <div class="container">
+        <div class="combo-banner-wrap">
+          <div class="combo-visual">
+            <span class="badge badge-accent">전략 3 · 크로스 머천다이징</span>
+            <h2 class="combo-title">
+              간편식 + 깔끔한 제로 음료 페어링 <br>
+              <span class="highlight-yellow">단돈 1,000원 균일가 (50% OFF)</span>
+            </h2>
+            <p class="combo-desc">
+              설문 결과 간편식 구매 고객의 <strong>85.7%</strong>가 음료를 함께 구매하며, 
+              이 중 <strong>76.1%</strong>가 저당·클린 음료(제로탄산 + 커피 + 차)를 압도적으로 선호했습니다. 
+              간편식 매대 바로 옆 'Zero Sugar & Coffee Zone'에서 파격 콤보 혜택을 누려보세요!
+            </p>
+
+            <div class="combo-items-row">
+              <div class="combo-item-pill">
+                <i class="fa-solid fa-bottle-water"></i> 제로 탄산수 (선호도 33.3% 1위)
+              </div>
+              <div class="combo-item-pill">
+                <i class="fa-solid fa-mug-hot"></i> 프리미엄 캔 아메리카노 (선호도 23.8%)
+              </div>
+              <div class="combo-item-pill">
+                <i class="fa-solid fa-leaf"></i> 유기농 차(Tea) 음료
+              </div>
+            </div>
+
+            <!-- Stamp Reward Flow -->
+            <div class="stamp-flow-box">
+              <h3 class="stamp-flow-title"><i class="fa-solid fa-stamp"></i> 간편식 콤보 스탬프 로드맵 (최대 60,000원 혜택)</h3>
+              <div class="stamp-steps">
+                <div class="step-card">
+                  <div class="step-num">STEP 1</div>
+                  <div class="step-val">3,000원</div>
+                  <div class="step-desc">간편식 첫 구매 스탬프</div>
+                </div>
+                <i class="fa-solid fa-arrow-right step-arrow"></i>
+                <div class="step-card">
+                  <div class="step-num">STEP 2</div>
+                  <div class="step-val">5,000원</div>
+                  <div class="step-desc">간편식 재구매 보너스</div>
+                </div>
+                <i class="fa-solid fa-arrow-right step-arrow"></i>
+                <div class="step-card">
+                  <div class="step-num">STEP 3</div>
+                  <div class="step-val">5,000원</div>
+                  <div class="step-desc">음료 콤보 스탬프 2차</div>
+                </div>
+                <i class="fa-solid fa-arrow-right step-arrow"></i>
+                <div class="step-card step-final">
+                  <div class="step-num">FINAL</div>
+                  <div class="step-val">20,000원</div>
+                  <div class="step-desc">최종 리워드 완성 쿠폰</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="combo-card-preview">
+            <img src="카드뉴스/3번 카드뉴스.png" alt="음료 콤보 할인 카드뉴스" class="combo-preview-img zoomable-image" data-lightbox="카드뉴스/3번 카드뉴스.png" data-caption="간편식 + 제로탄산/커피 50% 할인 (1,000원 균일가)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Cart & Discount Simulator Section -->
+    <section class="section calculator-section" id="calculator">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-calculator"></i> REAL-TIME SIMULATOR</span>
+          <h2 class="section-title">내 식단 장바구니 & <strong>실시간 할인 계산기</strong></h2>
+          <p class="section-subtitle">
+            방문할 점포를 선택하고 메뉴와 음료를 담아보세요! 즉시할인과 3개 묶음할인 혜택을 실시간으로 비교해 드립니다.
+          </p>
+        </div>
+
+        <div class="calc-wrapper">
+          <!-- Selection Controls -->
+          <div class="calc-controls">
+            <div class="store-selector-group">
+              <label class="control-label"><i class="fa-solid fa-store"></i> 쇼핑할 점포 선택:</label>
+              <div class="radio-pill-group">
+                <label class="radio-pill active" id="pill-river">
+                  <input type="radio" name="calc-store" value="river" checked>
+                  <span>📍 리버점 (단품 즉시할인 10% + 타임세일)</span>
+                </label>
+                <label class="radio-pill" id="pill-central">
+                  <input type="radio" name="calc-store" value="central">
+                  <span>📍 센트럴점 · 파크점 (3개 묶음 15% 할인)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Beverage Combo Toggle -->
+            <div class="beverage-selector-box">
+              <label class="checkbox-custom">
+                <input type="checkbox" id="add-beverage-checkbox">
+                <span class="checkbox-mark"></span>
+                <span class="checkbox-text">
+                  🥤 <strong>Zero Sugar 제로 탄산수 / 캔커피 콤보 추가 (+1,000원)</strong>
+                  <small class="text-muted">(정상가 2,000원 대비 50% 할인 혜택!)</small>
+                </span>
+              </label>
+            </div>
+
+            <!-- Quick Add Menu Buttons -->
+            <div class="quick-add-section">
+              <label class="control-label"><i class="fa-solid fa-plus-circle"></i> 메뉴 추가 담기:</label>
+              <div class="quick-add-buttons">
+                <button class="btn btn-chip quick-btn" data-code="RM-105" data-name="새우 로제파스타" data-price="7200" data-sale="6480">
+                  + 새우 로제파스타 (7,200원)
+                </button>
+                <button class="btn btn-chip quick-btn" data-code="RM-106" data-name="닭가슴살 곤약비빔밥" data-price="5200" data-sale="4680">
+                  + 닭가슴살 곤약비빔밥 (5,200원)
+                </button>
+                <button class="btn btn-chip quick-btn" data-code="RM-104" data-name="우삼겹 된장찌개" data-price="6800" data-sale="6120">
+                  + 우삼겹 된장찌개 (6,800원)
+                </button>
+                <button class="btn btn-chip quick-btn" data-code="RM-103" data-name="훈제오리 샐러드랩" data-price="6200" data-sale="5580">
+                  + 훈제오리 샐러드랩 (6,200원)
+                </button>
+                <button class="btn btn-chip quick-btn" data-code="RM-102" data-name="매콤 닭갈비볶음밥" data-price="5500" data-sale="4950">
+                  + 매콤 닭갈비볶음밥 (5,500원)
+                </button>
+                <button class="btn btn-chip quick-btn" data-code="RM-101" data-name="한끼 소불고기덮밥" data-price="5900" data-sale="5310">
+                  + 한끼 소불고기덮밥 (5,900원)
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Receipt Preview -->
+          <div class="calc-receipt-wrap">
+            <div class="receipt-card">
+              <div class="receipt-header">
+                <div class="receipt-emart-logo">emart FRESH RECEIPT</div>
+                <div class="receipt-store-name" id="receipt-store-display">이마트 리버점 (단품 즉시 할인)</div>
+                <div class="receipt-date" id="receipt-date-display">2026-10-15 실시간 시뮬레이션</div>
+              </div>
+
+              <div class="receipt-divider-dashed"></div>
+
+              <!-- Cart Item List -->
+              <div class="receipt-items-list" id="cart-items-container">
+                <!-- Javascript will inject items here -->
+              </div>
+
+              <div class="receipt-divider-dashed"></div>
+
+              <!-- Price Breakdown -->
+              <div class="receipt-summary">
+                <div class="receipt-row">
+                  <span>총 정상 상품 금액</span>
+                  <span id="summary-original-price">0원</span>
+                </div>
+                <div class="receipt-row text-success">
+                  <span id="summary-discount-label">단품 즉시 할인 (10%)</span>
+                  <span id="summary-discount-amount">-0원</span>
+                </div>
+                <div class="receipt-row text-info" id="summary-beverage-row" style="display:none;">
+                  <span>음료 콤보 균일가 (+1,000원)</span>
+                  <span id="summary-beverage-price">+1,000원</span>
+                </div>
+                <div class="receipt-divider-solid"></div>
+                <div class="receipt-row total-row">
+                  <span>최종 예상 결제 금액</span>
+                  <span class="total-price" id="summary-final-price">0원</span>
+                </div>
+                <div class="saved-callout" id="summary-saved-callout">
+                  총 <strong id="summary-saved-amount">0원</strong>을 절약하셨습니다! 🎉
+                </div>
+              </div>
+
+              <div class="receipt-footer">
+                <button class="btn btn-primary btn-block" id="receipt-coupon-trigger-btn">
+                  <i class="fa-solid fa-mobile-retro"></i> 이 혜택으로 쿠폰 받기
+                </button>
+                <button class="btn btn-ghost btn-sm btn-block text-muted" id="clear-cart-btn">
+                  <i class="fa-solid fa-trash-can"></i> 장바구니 비우기
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Plan & Data Insight Section (From PDF) -->
+    <section class="section master-plan-section" id="master-plan">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag section-tag-gold"><i class="fa-solid fa-file-shield"></i> MASTER PLAN & DATA INSIGHT</span>
+          <h2 class="section-title">데이터 실증 기획서 <strong>핵심 비즈니스 분석</strong></h2>
+          <p class="section-subtitle">
+            55일간 20개 SKU 실증 데이터와 21명 심층 고객 설문이 밝혀낸 구매전환율 병목 해결 마스터플랜
+          </p>
+        </div>
+
+        <!-- 4 Key Executive Insights Grid -->
+        <div class="insights-summary-grid">
+          <div class="insight-stat-card">
+            <div class="insight-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div class="insight-content">
+              <span class="insight-label">고객 설문 단품 선호도</span>
+              <strong class="insight-value">61.9%</strong>
+              <p class="insight-subtext">복잡한 2~3개 묶음 대비 단품 5~10% 즉시 할인 압도적 1위</p>
+            </div>
+          </div>
+
+          <div class="insight-stat-card">
+            <div class="insight-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></div>
+            <div class="insight-content">
+              <span class="insight-label">리버점 빈손 이탈률</span>
+              <strong class="insight-value">58.09%</strong>
+              <p class="insight-subtext">방문객 100명 중 58명 이탈 (이탈의 80%가 간편식 미구매)</p>
+            </div>
+          </div>
+
+          <div class="insight-stat-card">
+            <div class="insight-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="insight-content">
+              <span class="insight-label">연간 순증 매출 기대효과</span>
+              <strong class="insight-value">+9,753만 원</strong>
+              <p class="insight-subtext">전환율 41.91% → 46.44% 달성 시 연매출 10억 점포 돌파</p>
+            </div>
+          </div>
+
+          <div class="insight-stat-card">
+            <div class="insight-icon"><i class="fa-solid fa-chart-line-up"></i></div>
+            <div class="insight-content">
+              <span class="insight-label">투자금 전액 회수 기간</span>
+              <strong class="insight-value">2.3개월</strong>
+              <p class="insight-subtext">총 예산 1,850만 원 투입 대비 월 +801만 원 추가 캐시플로우 창출</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-depth Analysis Tabs -->
+        <div class="data-tabs-container">
+          <div class="data-tab-nav" id="data-tab-nav">
+            <button class="data-tab-btn active" data-tab="tab-survey" id="btn-tab-survey">
+              <i class="fa-solid fa-square-poll-vertical"></i> 1. 고객 설문 실증 분석 (N=21)
+            </button>
+            <button class="data-tab-btn" data-tab="tab-pos" id="btn-tab-pos">
+              <i class="fa-solid fa-cash-register"></i> 2. POS 55일 실적 & 전환율 병목
+            </button>
+            <button class="data-tab-btn" data-tab="tab-strategy" id="btn-tab-strategy">
+              <i class="fa-solid fa-chess-knight"></i> 3. 5대 종합 실행 전략
+            </button>
+            <button class="data-tab-btn" data-tab="tab-wbs" id="btn-tab-wbs">
+              <i class="fa-solid fa-calendar-days"></i> 4. 7주 WBS 로드맵 & 체크리스트
+            </button>
+            <button class="data-tab-btn" data-tab="tab-roi" id="btn-tab-roi">
+              <i class="fa-solid fa-coins"></i> 5. 예산 1,850만 & 재무 ROI
+            </button>
+          </div>
+
+          <!-- Tab 1: Survey Analysis -->
+          <div class="data-tab-panel active" id="tab-survey">
+            <div class="panel-inner-grid">
+              <div class="chart-block">
+                <h4 class="chart-title">Q1. 간편식 미구매/망설임 주된 사유</h4>
+                <div class="progress-bar-group">
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>1위. 원하는 메뉴/품목 부족 (라인업)</span>
+                      <strong>33.3% (7명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 33.3%;"></div></div>
+                  </div>
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>2위. 매장에 간편식 구매 계획 없었음</span>
+                      <strong>28.6% (6명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 28.6%;"></div></div>
+                  </div>
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>3위. 가격 대비 양/구성 부담</span>
+                      <strong>23.8% (5명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 23.8%;"></div></div>
+                  </div>
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>4위. 유통기한/보관 부담 (당장 취식X)</span>
+                      <strong>14.3% (3명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 14.3%;"></div></div>
+                  </div>
+                </div>
+                <div class="chart-insight-badge">
+                  <i class="fa-solid fa-lightbulb"></i> <strong>시사점:</strong> 비계획 구매 고객(28.6%)을 잡기 위해 매장 입구 3m 전면 VMD 시각 노출 및 시그니처 메뉴 라인업 보강이 결정적!
+                </div>
+              </div>
+
+              <div class="chart-block">
+                <h4 class="chart-title">Q2. 가장 매력적으로 느껴지는 할인 조건</h4>
+                <div class="progress-bar-group">
+                  <div class="prog-item highlight-prog">
+                    <div class="prog-label">
+                      <span>1위. 단품 즉시 할인 (1개만 사도 5~10%)</span>
+                      <strong class="text-danger">61.9% (13명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill fill-accent" style="width: 61.9%;"></div></div>
+                  </div>
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>2위. 다량 묶음 할인 (2~3개 시 15~20%)</span>
+                      <strong>14.3% (3명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 14.3%;"></div></div>
+                  </div>
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>2위. 교차 묶음 할인 (유제품/신선 결합)</span>
+                      <strong>14.3% (3명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 14.3%;"></div></div>
+                  </div>
+                  <div class="prog-item">
+                    <div class="prog-label">
+                      <span>4위. 음료 결합 세트 할인 (50% or 균일가)</span>
+                      <strong>9.5% (2명)</strong>
+                    </div>
+                    <div class="prog-track"><div class="prog-fill" style="width: 9.5%;"></div></div>
+                  </div>
+                </div>
+                <div class="chart-insight-badge">
+                  <i class="fa-solid fa-lightbulb"></i> <strong>시사점:</strong> 1인 가구는 다량 묶음에 큰 부담을 느낌. 리버점은 '단품 5~10% 즉시 할인' 도입 시 즉각적 구매 전환 유발!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: POS & Bottleneck Simulation -->
+          <div class="data-tab-panel" id="tab-pos">
+            <div class="bottleneck-banner">
+              <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="alert-content">
+                <h4>데이터가 밝혀낸 진실: 점포 간 성과 격차는 '객단가'가 아닌 '구매전환율'</h4>
+                <p>
+                  세 점포의 고객 1인당 평균 객단가는 <strong>센트럴점 32,811원, 파크점 32,761원, 리버점 32,698원</strong>으로 0.3% 이내 거의 완벽히 일치합니다. 
+                  하지만 방문객 100명당 구매자 수는 <strong>센트럴점 46.44명 vs 리버점 41.91명</strong>으로, 리버점은 매일 100명 중 58명이 빈손으로 이탈하고 있었습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>구분 지표</th>
+                    <th>현재 (전환율 41.91%)</th>
+                    <th>개선 후 (목표 46.44%)</th>
+                    <th>매출 순증 효과 (ROI)</th>
+                    <th>세부 산출 근거</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>일평균 매출액</strong></td>
+                    <td>2,474,908원</td>
+                    <td class="text-primary font-bold">2,742,126원</td>
+                    <td class="text-success font-bold">+267,218원 / 일 (+10.8%)</td>
+                    <td>방문객수(197.6명) × 전환율 증가(+4.53%p) × 객단가</td>
+                  </tr>
+                  <tr>
+                    <td><strong>월간 매출액 (30일)</strong></td>
+                    <td>74,247,240원</td>
+                    <td class="text-primary font-bold">82,263,780원</td>
+                    <td class="text-success font-bold">+8,016,540원 / 월</td>
+                    <td>월간 약 800만 원 규모 추가 캐시플로우 창출</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>연간 매출액 (365일)</strong></td>
+                    <td>903,341,420원</td>
+                    <td class="text-primary font-bold">1,000,875,990원</td>
+                    <td class="text-success font-bold">+97,534,570원 / 년</td>
+                    <td><strong>연간 약 9,753만 원 순증 (10억 점포 돌파!)</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 3: 5 Core Strategies -->
+          <div class="data-tab-panel" id="tab-strategy">
+            <div class="strategy-cards-grid">
+              <div class="strategy-item-card">
+                <div class="st-num">전략 01</div>
+                <h4>상권별 프로모션 이원화</h4>
+                <p>• 센트럴/파크점: 묶음 탄력성 높은 '3개 15% 할인' 번들 유지<br>• 리버점: 1인 가구 타깃 '인기 단품 5~10% 즉시 할인'으로 전환하여 문턱 제거</p>
+              </div>
+              <div class="strategy-item-card">
+                <div class="st-num">전략 02</div>
+                <h4>VMD 공간 혁신 & 골든존 진열</h4>
+                <p>• 설문 입증 골든존 수용도 90.5% 반영<br>• 리버점 주출입구 3m 이내 오픈 쇼케이스 전면 이동, 눈높이 1.2~1.5m 집중 배치</p>
+              </div>
+              <div class="strategy-item-card">
+                <div class="st-num">전략 03</div>
+                <h4>크로스 머천다이징 페어링</h4>
+                <p>• 음료 동반 구매 85.7% (제로탄산 33.3%, 커피 23.8%)<br>• 간편식 옆 'Zero Sugar & Coffee' 코너 설치, 콤보 구매 시 50% 할인 (1,000원 균일가)</p>
+              </div>
+              <div class="strategy-item-card">
+                <div class="st-num">전략 04</div>
+                <h4>퇴근길 프레시 타임 마케팅</h4>
+                <p>• 평일 월·화 18~20시 퇴근길 타임세일 집중 운영<br>• 17:30 모바일 앱 타깃 쿠폰 푸시로 직장인 고객 집중 유입 및 당일 폐기율 방어</p>
+              </div>
+              <div class="strategy-item-card">
+                <div class="st-num">전략 05</div>
+                <h4>SCM S&OP & BSC 다차원 성과모델</h4>
+                <p>• 품절 위험 신선식품 발주 +15% 확대, 악성 적체 생활용품 발주 -25% 감축<br>• 단순 매출 평가 탈피, [면적당 매출액]과 [구매전환율] 중심 KPI 개편</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: WBS & Checklist -->
+          <div class="data-tab-panel" id="tab-wbs">
+            <div class="wbs-timeline">
+              <div class="wbs-step">
+                <div class="wbs-pill">W-2 (D-14 ~ D-8)</div>
+                <div class="wbs-info">
+                  <strong>기획 확정 및 시스템 연동</strong>
+                  <p>경영진 최종 결재, POS 단품 5~10% 및 콤보 할인 로직 등록·테스트, 리버점 오픈 쇼케이스 렌탈 계약 체결</p>
+                </div>
+              </div>
+              <div class="wbs-step">
+                <div class="wbs-pill">W-1 (D-7 ~ D-1)</div>
+                <div class="wbs-info">
+                  <strong>VMD 시공 및 현장 교육</strong>
+                  <p>리버점 야간 매대 재배치 (주출입구 3m 전진), 골든존 쇼카드 및 음료 콤보 연계 매대 설치, 타임세일 리허설</p>
+                </div>
+              </div>
+              <div class="wbs-step highlight-step">
+                <div class="wbs-pill">W1~W2 (D-Day ~ D+14)</div>
+                <div class="wbs-info">
+                  <strong>리버점 집중 파일럿 런칭</strong>
+                  <p>단품 5~10% 즉시 할인 개시, 월·화 18~20시 퇴근길 타임세일 가동, 17:30 앱 쿠폰 발송, 전환율 일일 트래킹</p>
+                </div>
+              </div>
+              <div class="wbs-step">
+                <div class="wbs-pill">W3~W4 (D+15 ~ D+28)</div>
+                <div class="wbs-info">
+                  <strong>전점 확대 및 SCM 최적화</strong>
+                  <p>센트럴/파크점 맞춤 번들 연계, SCM 신선식품 +15% 및 생활용품 -25% 리밸런싱, 점포별 결품률/폐기율 모니터링</p>
+                </div>
+              </div>
+              <div class="wbs-step">
+                <div class="wbs-pill">W5 (D+29 ~ D+35)</div>
+                <div class="wbs-info">
+                  <strong>최종 성과 정산 및 표준화</strong>
+                  <p>리버점 전환율 46.44% 달성 검증, 투자 대비 수익(ROI) 정산, 연간 상시 운영 지침서(SOP) 제정 및 2차 시즌 기획</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5: Budget & ROI -->
+          <div class="data-tab-panel" id="tab-roi">
+            <div class="budget-breakdown-grid">
+              <div class="budget-card">
+                <h4>총 소요 예산 1,850만 원 항목별 배분</h4>
+                <div class="budget-items-list">
+                  <div class="b-item">
+                    <span class="b-name">1. VMD 및 매장 시설비 (쇼케이스/슬림매대/조명)</span>
+                    <span class="b-val">5,500,000원 (29.7%)</span>
+                  </div>
+                  <div class="b-item">
+                    <span class="b-name">2. 인쇄물 및 홍보 POP (입구배너/쇼카드/스탠드)</span>
+                    <span class="b-val">2,500,000원 (13.5%)</span>
+                  </div>
+                  <div class="b-item">
+                    <span class="b-name">3. 마케팅 및 프로모션 지원 (쿠폰/판촉지원/차액보전)</span>
+                    <span class="b-val">5,500,000원 (29.7%)</span>
+                  </div>
+                  <div class="b-item">
+                    <span class="b-name">4. 인건비 및 현장 지원 (야간시공 2인/안내스태프)</span>
+                    <span class="b-val">2,500,000원 (13.5%)</span>
+                  </div>
+                  <div class="b-item">
+                    <span class="b-name">5. 예비비 (긴급 물류/시설 보수/잔여재고 방어)</span>
+                    <span class="b-val">2,500,000원 (13.5%)</span>
+                  </div>
+                </div>
+                <div class="budget-total-row">
+                  <span>총 합계 (Total Budget)</span>
+                  <strong>18,500,000원</strong>
+                </div>
+              </div>
+
+              <div class="roi-summary-card">
+                <div class="roi-stamp">ROI 2.3개월 회수</div>
+                <h4>재무적 타당성 평가 결론</h4>
+                <p>
+                  총 예산 1,850만 원 투입 시, 리버점 구매전환율이 41.91%에서 46.44%로 개선되면 
+                  <strong>월간 +801만 원, 연간 +9,753만 원</strong>의 순증 매출이 실현됩니다.
+                </p>
+                <div class="roi-metrics-box">
+                  <div class="roi-m-item">
+                    <span>월 순증 매출</span>
+                    <strong>+8,016,540원</strong>
+                  </div>
+                  <div class="roi-m-item">
+                    <span>원금 회수 시점</span>
+                    <strong>사업 런칭 후 2.3개월</strong>
+                  </div>
+                </div>
+                <p class="roi-note">
+                  "철저한 데이터 검증과 사전 설문 조사를 통해 리스크를 원천 차단한 고수익·저비용 구조의 탁월한 프로젝트입니다."
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Master PDF View/Download Banner -->
+        <div class="pdf-download-bar">
+          <div class="pdf-info">
+            <i class="fa-solid fa-file-pdf"></i>
+            <div>
+              <strong>기획서 원본 문서: 최종_진짜_최졗_기햣서.pdf (2.04 MB)</strong>
+              <span>리테일 영업전략본부 · 데이터분석팀 & 간편식 혁신 TF 종합 마스터 기획서</span>
+            </div>
+          </div>
+          <a href="최종_진짜_최졗_기햣서.pdf" download class="btn btn-outline-white" id="download-pdf-btn">
+            <i class="fa-solid fa-download"></i> 기획서 PDF 다운로드
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & Store Info Section -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="fa-solid fa-circle-question"></i> FAQ & GUIDE</span>
+          <h2 class="section-title">자주 묻는 질문 & <strong>매장 이용 안내</strong></h2>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q1">
+              <span>Q. 리버점 단품 즉시 할인은 몇 개부터 적용되나요?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>단 1개만 구매하셔도 즉시 5~10% 할인이 적용됩니다! 1인 가구 고객님께서 여러 개 묶음 구매에 대한 부담 없이 원하시는 메뉴를 언제든 가볍게 즐기실 수 있도록 준비했습니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q2">
+              <span>Q. 퇴근길 프레시 타임세일은 주말에도 진행되나요?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>퇴근길 프레시 타임세일은 직장인 고객님의 월요병 극복과 알뜰한 저녁 식사를 지원하기 위해 <strong>평일 월요일과 화요일 오후 18:00 ~ 20:00 (2시간 집중)</strong>에 리버점에서 한정 진행됩니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q3">
+              <span>Q. 센트럴점과 파크점의 3개 묶음 할인은 서로 다른 메뉴를 골라도 되나요?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>네, 물론입니다! 행사 대상 냉장 간편식 6종(새우로제파스타, 곤약비빔밥, 된장찌개, 샐러드랩, 닭갈비볶음밥, 소불고기덮밥) 중 원하시는 3가지를 자유롭게 교차 선택하셔도 15% 묶음 할인이 동일하게 적용됩니다.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" id="faq-q4">
+              <span>Q. 음료 1,000원 균일가 콤보 혜택은 어떻게 받나요?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>냉장 간편식을 구매하시면서 매대 바로 옆 'Zero Sugar & Coffee Pairing Zone'에 진열된 제로 탄산수 또는 프리미엄 캔커피를 함께 계산대에 제시하시면 자동으로 50% 할인되어 1,000원에 결제됩니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-badge">emart X FRESH MEAL</div>
+          <p class="footer-tagline">
+            데이터로 고객의 일상을 더 맛있고 편리하게! <br>
+            리테일 영업전략본부 · 데이터분석팀 & 간편식 혁신 TF
+          </p>
+        </div>
+
+        <div class="footer-stores">
+          <h4>행사 진행 점포 안내</h4>
+          <ul>
+            <li><strong>📍 이마트 리버점:</strong> 서울시 강변북로 100 | 타임세일: 평일 월·화 18:00~20:00</li>
+            <li><strong>📍 이마트 센트럴점:</strong> 서울시 중앙로 250 | 3개 묶음 15% 상시 운영</li>
+            <li><strong>📍 이마트 파크점:</strong> 서울시 공원대로 88 | 3개 묶음 15% 상시 운영</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 FRESH MEAL PROJECT. All rights reserved. 본 웹사이트는 POS 실증 데이터와 카드뉴스를 기반으로 제작된 프로모션 쇼케이스 페이지입니다.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Card News & Poster -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="닫기">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img src="" alt="" class="lightbox-full-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Mobile Coupon Modal -->
+  <div class="coupon-modal" id="coupon-modal" aria-hidden="true">
+    <div class="coupon-backdrop" id="coupon-backdrop"></div>
+    <div class="coupon-dialog">
+      <button class="coupon-close-btn" id="coupon-close-btn" aria-label="닫기">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="coupon-dialog-header">
+        <div class="coupon-header-badge">LIMITED COUPON</div>
+        <h3 class="coupon-dialog-title">퇴근길 타임특가 모바일 쿠폰 받기</h3>
+        <p class="coupon-dialog-desc">휴대폰 번호를 입력하시면 월·화 17:30에 알림톡과 함께 모바일 바코드 쿠폰을 즉시 발급해 드립니다.</p>
+      </div>
+
+      <form class="coupon-form" id="coupon-claim-form">
+        <div class="form-group">
+          <label for="user-phone">휴대폰 번호</label>
+          <input type="tel" id="user-phone" placeholder="010-1234-5678" required pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}">
+        </div>
+
+        <div class="form-group">
+          <label for="user-store-select">주 방문 점포</label>
+          <select id="user-store-select" required>
+            <option value="river">이마트 리버점 (단품 즉시할인 + 타임세일 18~20시)</option>
+            <option value="central">이마트 센트럴점 (3개 묶음 15% 할인)</option>
+            <option value="park">이마트 파크점 (3개 묶음 15% 할인)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-custom small">
+            <input type="checkbox" id="privacy-agree" checked required>
+            <span class="checkbox-mark"></span>
+            <span class="checkbox-text">개인정보 수집 및 마케팅 알림톡 발송에 동의합니다.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-coupon-btn">
+          <i class="fa-solid fa-gift"></i> 모바일 쿠폰 무료 발급받기
+        </button>
+      </form>
+
+      <!-- Coupon Ticket Result (Hidden initially) -->
+      <div class="coupon-result-card" id="coupon-result-container" style="display:none;">
+        <div class="ticket-cutout-top"></div>
+        <div class="ticket-inner">
+          <div class="ticket-badge">VALID COUPON</div>
+          <h4 class="ticket-title" id="ticket-title-text">[리버점 한정] 퇴근길 간편식 10% 추가할인</h4>
+          <p class="ticket-period">유효기간: 2026.04.01 ~ 2026.06.30 (평일 월·화 18~20시)</p>
+          <div class="ticket-barcode-wrap">
+            <div class="barcode-lines"></div>
+            <span class="barcode-number" id="ticket-barcode-number">8801234567890</span>
+          </div>
+          <p class="ticket-notice">* 계산 시 위 바코드를 직원에게 제시해주세요.</p>
+        </div>
+        <button class="btn btn-secondary btn-block" id="save-coupon-image-btn">
+          <i class="fa-solid fa-download"></i> 쿠폰 이미지로 저장
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main Javascript File -->
+  <script src="script.js"></script>
+</body>
+</html>
